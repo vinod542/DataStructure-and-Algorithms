@@ -1,0 +1,19 @@
+#linear search
+def Linear_search(arr, item, start):
+    for i in range(start, len(arr)):
+        if arr[i] == item:
+            print arr[i]
+
+#Binary search
+def Binary_search(arr, item, start_index, end_index):
+    mid_value = (start_index+end_index)/2
+    if start_index > end_index:
+        print 'no value to find'
+    elif arr[mid_value] < item:
+        start_index = mid_value+1
+        Binary_search(arr, item, start_index, end_index)
+    elif arr[mid_value] > item:
+        end_index = mid_value-1
+        Binary_search(arr, item, start_index, end_index)
+    else:
+        print "item at index:" +str(mid_value)
