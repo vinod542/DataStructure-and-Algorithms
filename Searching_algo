@@ -17,3 +17,16 @@ def Binary_search(arr, item, start_index, end_index):
         Binary_search(arr, item, start_index, end_index)
     else:
         print "item at index:" +str(mid_value)
+##Binary Search
+def binarySearchSortedArray(nums, s):
+	start_index = 0
+  end_index = len(nums)-1
+  while start_index <= end_index:
+    middle_index = (start_index+end_index)/2
+    if s < nums[middle_index]:
+      end_index = middle_index-1
+    elif s > nums[middle_index]:
+      start_index = middle_index+1
+    else:
+      return True
+  return False
